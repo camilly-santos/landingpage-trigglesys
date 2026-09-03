@@ -1,0 +1,67 @@
+@import '../../styles/variables';
+
+/* Formato pill (arredondado) com alinhamento flexível e centralizado. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius-pill;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: $transition-fast;
+  text-decoration: none;
+
+  /* Botão primário em azul elétrico com elevação e brilho ao passar o mouse. */
+  &.primary {
+    background: $color-electric-cyan;
+    color: #090D16;
+    box-shadow: 0 4px 20px rgba(0, 163, 255, 0.35);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(0, 163, 255, 0.5);
+      background: lighten(#00A3FF, 5%);
+    }
+  }
+
+  /* Estilo translúcido com efeito de vidro fosco (glassmorphism). */
+  &.glass {
+    background: rgba(15, 23, 42, 0.6);
+    color: $color-text-heading;
+    border: 1px solid $glass-border;
+    backdrop-filter: blur(12px);
+
+    &:hover {
+      background: rgba(30, 41, 59, 0.8);
+      border-color: $glass-border-hover;
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Versão com contorno para ações secundárias ou de menor prioridade. */
+  &.outline {
+    background: transparent;
+    color: $color-electric-cyan;
+    border: 1px solid rgba(0, 163, 255, 0.4);
+
+    &:hover {
+      background: rgba(0, 163, 255, 0.1);
+      border-color: $color-electric-cyan;
+    }
+  }
+}
+
+/* Transição suave para movimentação do ícone. */
+.icon {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+/* Desloca o ícone 2px para a direita durante o hover no botão. */
+.button:hover .icon {
+  transform: translateX(2px);
+}

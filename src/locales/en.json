@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "solutions": "Solutions & Engineering",
+    "methodology": "Methodology",
+    "projects": "Projects",
+    "about": "About Us",
+    "compliance": "Compliance",
+    "insights": "Insights"
+  },
+  "hero": {
+    "badge": "Strategic IT Consulting Boutique & Software Engineering",
+    "title": {
+      "part1": "Consulting in",
+      "cloud": "Cloud,",
+      "security": "Security",
+      "and": "and",
+      "governance": "Governance",
+      "part2": "with Architecture",
+      "architecture": "\"Interact Once, Run Anywhere\"."
+    },
+    "subtitle": "We turn complex ideas into practical solutions. From process modeling to the cloud, we structure custom systems for companies that need to optimize costs, ensure resilience, and scale with full control.",
+    "actions": {
+      "schedule": "Schedule Strategic Diagnosis",
+      "talk": "Talk to a Specialist"
+    },
+    "microBadges": {
+      "zeroTrust": "Zero Trust Approach",
+      "uml": "Enterprise UML Modeling",
+      "lgpd": "LGPD / GDPR Ready",
+      "iso": "ISO 27001 / 27701",
+      "oracle": "Oracle Java Certified"
+    }
+  },
+  "painPoints": {
+    "tag": "PROBLEMS WE SOLVE",
+    "title": "The pain points blocking digital evolution — and how we address each one.",
+    "subtitle": "We act where the impact is financial and operational: cost, security, standardization, and technical continuity.",
+    "cards": [
+      {
+        "id": "cloud-cost",
+        "title": "High Costs and Lack of Cloud Control",
+        "description": "Growing invoices, oversizing, and lack of financial visibility over cloud environments."
+      },
+      {
+        "id": "security-risk",
+        "title": "Security Risks and Downtime",
+        "description": "Vulnerabilities, lack of monitoring, and exposure of critical assets to the market."
+      },
+      {
+        "id": "rigid-systems",
+        "title": "Rigid Systems and Lack of Standardization",
+        "description": "Processes without architectural modeling (UML), generating rework and vendor lock-in."
+      },
+      {
+        "id": "unaligned-teams",
+        "title": "Unaligned Technical Teams",
+        "description": "Teams with fragmented skills, low productivity, and difficulty evolving technologically."
+      },
+      {
+        "id": "no-dr-plan",
+        "title": "Infrastructure Without Continuity Plan",
+        "description": "Fragile operations without structured Disaster Recovery (DR) or defined RTO/RPO."
+      },
+      {
+        "id": "cloud-lockin",
+        "title": "Vendor Lock-in and Loss of Sovereignty",
+        "description": "Excessive reliance on cloud providers without real data and application portability."
+      }
+    ]
+  }
+}
+

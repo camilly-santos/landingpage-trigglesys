@@ -1,0 +1,300 @@
+@import '../../styles/variables';
+
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: $color-deep-bg;
+}
+
+/* BACKGROUND COM INTERAÇÃO DO MOUSE */
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; 
+    will-change: transform;
+    transform-origin: center center;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 20%, $color-deep-bg 90%);
+  pointer-events: none;
+}
+
+/* =========================================
+   TEXTO & TIPOGRAFIA
+========================================= */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  margin: 0 auto 1.5rem;
+  font-size: clamp(2.2rem, 4.5vw, 4.2rem); 
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  max-width: 950px;
+  will-change: transform;
+  transform-origin: center center;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.textGradientCyan {
+  background: linear-gradient(90deg, #00A3FF, #00F0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #00A3FF; 
+}
+
+.textGradientPurple {
+  background: linear-gradient(90deg, #8B5CF6, #D946EF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #8B5CF6; 
+}
+
+.highlightText {
+  color: #E2E8F0; 
+  font-style: italic; 
+  font-weight: 700;
+}
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+.subtitle {
+  font-size: 1.125rem;
+  color: #94A3B8;
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* =========================================
+   AÇÕES & BOTÕES PREMIUM
+========================================= */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    width: 100%;
+    
+    button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.btnPrimaryPremium {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #00A3FF 0%, #0077FF 100%);
+  color: #ffffff;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 163, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 163, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+}
+
+.btnSecondaryPremium {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: #E2E8F0;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 163, 255, 0.4);
+    color: #ffffff;
+  }
+}
+
+/* =========================================
+   MICRO BADGES — ATUALIZADOS
+   
+   Visual: card escuro arredondado com
+   glow azul na borda inferior, inspirado
+   na imagem de referência fornecida.
+
+   Camadas:
+     .microBadgesContainer → linha divisória + flex wrap
+     .microBadge           → card base (bg escuro + border sutil)
+     .microBadge::before   → glow azul difuso na borda inferior
+     .microBadge::after    → linha fina azul exatamente na borda inferior
+     .microBadgeIcon       → círculo pequeno com ícone
+     .microBadgeLabel      → texto legível branco
+========================================= */
+.microBadgesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;           // Espaço reduzido para manter compacto
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+}
+
+.microBadge {
+  // Layout interno
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+
+  // Card base — dark glass
+  background: rgba(10, 16, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  // GPU layer para o pseudo-elemento não causar repaint
+  position: relative;
+  overflow: hidden;       // Confina o glow dentro do border-radius
+  will-change: transform;
+
+  // Transição suave de borda e brilho ao hover
+  transition:
+    border-color  0.3s ease,
+    box-shadow    0.3s ease,
+    transform     0.25s ease;
+
+  // ── Glow azul difuso na borda inferior ─────────────────────────────
+  // ::before → blob luminoso grande que emana de baixo para cima
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 36px;
+    background: radial-gradient(
+      ellipse at center bottom,
+      rgba(0, 163, 255, 0.55) 0%,
+      rgba(0, 119, 255, 0.2)  45%,
+      transparent             75%
+    );
+    filter: blur(6px);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  // ── Linha fina azul exatamente na borda inferior ────────────────────
+  // ::after → linha de 1-2px colada no fundo do card
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12%;
+    right: 12%;
+    height: 1.5px;
+    background: linear-gradient(
+      90deg,
+      transparent            0%,
+      rgba(0, 163, 255, 0.9) 35%,
+      rgba(0, 200, 255, 1)   50%,
+      rgba(0, 163, 255, 0.9) 65%,
+      transparent            100%
+    );
+    border-radius: 0 0 12px 12px;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  // ── Hover: acentua o glow e eleva o card ──────────────────────────
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 163, 255, 0.25);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.5),
+      0 0 12px rgba(0, 163, 255, 0.12);
+
+    .microBadgeIcon { color: #00cfff; }
+    .microBadgeLabel { color: #ffffff; }
+  }
+}
+
+// Círculo com o ícone de check — posição relativa z:2 para ficar acima do glow
+.microBadgeIcon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #00a3ff;
+  transition: color 0.25s ease;
+}
+
+// Label com texto legível — branco com leve transparência no repouso
+.microBadgeLabel {
+  position: relative;
+  z-index: 2;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88); // Bem mais visível que o 0.6 anterior
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}

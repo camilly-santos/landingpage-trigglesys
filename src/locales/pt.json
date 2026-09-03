@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Início",
+    "solutions": "Soluções & Engenharia",
+    "methodology": "Metodologia",
+    "projects": "Projetos",
+    "about": "Quem Somos",
+    "compliance": "Compliance",
+    "insights": "Insights"
+  },
+  "hero": {
+    "badge": "Boutique de Consultoria Estratégica em TI & Engenharia de Software",
+    "title": {
+      "part1": "Consultoria em",
+      "cloud": "Cloud,",
+      "security": "Segurança",
+      "and": "e",
+      "governance": "Governança",
+      "part2": "com Arquitetura",
+      "architecture": "\"Interact Once, Run Anywhere\"."
+    },
+    "subtitle": "Transformamos ideias complexas em soluções práticas. Da modelagem de processos à nuvem, estruturamos sistemas sob medida para empresas que precisam otimizar custos, garantir resiliência e escalar com controle total.",
+    "actions": {
+      "schedule": "Agendar Diagnóstico Estratégico",
+      "talk": "Falar com Especialista"
+    },
+    "microBadges": {
+      "zeroTrust": "Zero Trust Approach",
+      "uml": "Modelagem UML Enterprise",
+      "lgpd": "LGPD / GDPR Ready",
+      "iso": "ISO 27001 / 27701",
+      "oracle": "Oracle Java Certified"
+    }
+  },
+  "painPoints": {
+    "tag": "PROBLEMAS QUE RESOLVEMOS",
+    "title": "As dores que travam a evolução digital — e como atacamos cada uma.",
+    "subtitle": "Atuamos onde o impacto é financeiro e operacional: custo, segurança, padronização e continuidade técnica.",
+    "cards": [
+      {
+        "id": "cloud-cost",
+        "title": "Custos Altos e Descontrole em Cloud",
+        "description": "Faturas crescentes, oversizing e falta de visibilidade financeira sobre ambientes em nuvem."
+      },
+      {
+        "id": "security-risk",
+        "title": "Riscos de Segurança e Indisponibilidade",
+        "description": "Vulnerabilidades, ausência de monitoramento e exposição de ativos críticos ao mercado."
+      },
+      {
+        "id": "rigid-systems",
+        "title": "Sistemas Rígidos e Falta de Padronização",
+        "description": "Processos sem modelagem arquitetural (UML), gerando retrabalhos e dependência de código proprietário."
+      },
+      {
+        "id": "unaligned-teams",
+        "title": "Equipes Técnicas Desalinhadas",
+        "description": "Times com competências fragmentadas, baixa produtividade e dificuldade de evoluir tecnologicamente."
+      },
+      {
+        "id": "no-dr-plan",
+        "title": "Infraestrutura sem Plano de Continuidade",
+        "description": "Operações fragilizadas, sem Disaster Recovery (DR) estruturado ou RTO/RPO definidos."
+      },
+      {
+        "id": "cloud-lockin",
+        "title": "Lock-in e Perda de Soberania",
+        "description": "Dependência excessiva de fornecedores de nuvem sem portabilidade real de dados e aplicações."
+      }
+    ]
+  }
+
+}

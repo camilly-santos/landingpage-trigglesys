@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// TRIGGLESYS - DESIGN SYSTEM & BOOTSTRAP 5 OVERRIDES
+// -----------------------------------------------------------------------------
+
+// 1. Core Palette Tokens (Baseado na UI Mockup)
+$color-deep-bg: #000000;          // PRETO ABSOLUTO
+$color-surface: #0F172A;          
+$color-surface-hover: #1E293B;    
+$color-electric-cyan: #00A3FF;    
+$color-purple-voltage: #8B5CF6;   
+$color-emerald-green: #10B981;
+// 2. Typography & Text Hierarchy
+$color-text-heading: #FFFFFF;     // Títulos principais e contrastes
+$color-text-body: #94A3B8;        // Parágrafos e descrições secundárias
+$color-text-muted: #64748B;       // Metadados, labels e bordas inativas
+$font-family-base: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+$font-family-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+
+// 3. Bootstrap 5 Overrides (Aplicações Globais do Framework)
+$primary: $color-electric-cyan;
+$secondary: $color-purple-voltage;
+$success: $color-emerald-green;
+$dark: $color-surface;
+
+$body-bg: $color-deep-bg;
+$body-color: $color-text-body;
+$headings-color: $color-text-heading;
+$headings-font-weight: 700;
+
+// 4. Glassmorphism, Borders & Glows
+$glass-surface: rgba(15, 23, 42, 0.75);
+$glass-border: rgba(255, 255, 255, 0.08);
+$glass-border-hover: rgba(0, 163, 255, 0.35);
+
+$glow-cyan: 0 0 25px rgba(0, 163, 255, 0.25);
+$glow-purple: 0 0 25px rgba(139, 92, 246, 0.25);
+$glow-card-hover: 0 10px 30px -10px rgba(0, 163, 255, 0.3);
+
+// 5. Layout & Spacing Tokens
+$border-radius-card: 16px;
+$border-radius-pill: 9999px;
+$transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+$transition-base: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);

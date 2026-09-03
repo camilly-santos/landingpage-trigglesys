@@ -1,0 +1,48 @@
+//Mixin de Glassmorphism, Glows e Grids
+@import 'variables';
+
+// 1. Glassmorphic Surface Mixin
+@mixin glass-card($bg: $glass-surface, $border: $glass-border) {
+  background: $bg;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid $border;
+  border-radius: $border-radius-card;
+}
+
+// 2. Interactive Neon Glow on Hover
+@mixin hover-glow($glow-color: rgba(0, 163, 255, 0.25), $border-color: $glass-border-hover) {
+  transition: $transition-base;
+
+  &:hover {
+    border-color: $border-color;
+    box-shadow: 0 8px 25px -5px $glow-color;
+    transform: translateY(-3px);
+  }
+}
+
+// 3. Technical Grid & Mesh Overlay (CORRIGIDO)
+@mixin bg-grid-pattern($base-gradient: linear-gradient(135deg, #02040a 0%, #060d1f 50%, #0a1536 100%)) {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    $base-gradient; /* O degradê entra aqui como a última camada do fundo */
+  
+  // O último "cover" garante que o degradê preencha a tela toda
+  background-size: 48px 48px, 48px 48px, cover; 
+  background-attachment: fixed;
+}
+
+// 4. Gradient Text Generator
+@mixin text-gradient($start: $color-electric-cyan, $end: #38BDF8) {
+  background: linear-gradient(135deg, $start 0%, $end 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// 5. Flexbox Centering Helper
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

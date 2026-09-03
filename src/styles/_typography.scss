@@ -1,0 +1,58 @@
+//Fontes
+// -----------------------------------------------------------------------------
+// TRIGGLESYS - TYPOGRAPHY & FONT CONFIGURATION
+// -----------------------------------------------------------------------------
+
+// 1. Google Fonts Import (Plus Jakarta Sans & Inter)
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+// 2. Base Typography Reset & Rendering Optimization
+html, body {
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+// 3. Headings Scale & Styling
+h1, h2, h3, h4, h5, h6 {
+  color: $color-text-heading;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: 1.3;
+}
+
+// 4. Helper Text Classes
+.text-gradient-cyan {
+  @include text-gradient($color-electric-cyan, #38BDF8);
+}
+
+.text-gradient-purple {
+  @include text-gradient($color-purple-voltage, #A855F7);
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $color-electric-cyan;
+  margin-bottom: 0.75rem;
+}

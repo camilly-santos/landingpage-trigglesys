@@ -1,0 +1,51 @@
+//Import do Bootstrap SASS + estilos base
+// -----------------------------------------------------------------------------
+// TRIGGLESYS - MAIN SASS ENTRY POINT
+// -----------------------------------------------------------------------------
+
+// 1. Core Variables (Must be imported before Bootstrap to override defaults)
+@import 'variables';
+
+// 2. Import Bootstrap 5 SASS Source
+@import 'bootstrap/scss/bootstrap';
+
+// 3. Import Architecture Mixins & Typography
+@import 'mixins';
+@import 'typography';
+
+// 4. Global Layout & Canvas Settings
+body {
+  // Uma cor de fallback sólida caso a imagem falhe
+  background-color: $color-deep-bg; 
+  color: $color-text-body;
+  min-height: 100vh;
+  overflow-x: hidden;
+  
+  // O mixin agora injeta tanto a grade quanto o degradê escuro perfeitamente!
+  @include bg-grid-pattern;
+}
+
+// 5. Custom Enterprise Scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-deep-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: $border-radius-pill;
+  border: 2px solid $color-deep-bg;
+
+  &:hover {
+    background: $color-electric-cyan;
+  }
+}
+
+// 6. Global Selection & Focus States
+::selection {
+  background: rgba(0, 163, 255, 0.3);
+  color: $color-text-heading;
+}

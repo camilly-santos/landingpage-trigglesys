@@ -1,0 +1,239 @@
+@import '../../styles/variables';
+
+// ----------------------------------------------------------------------
+// ESTRUTURA E CONTAINER FIXO DA NAVBAR
+// ----------------------------------------------------------------------
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.25rem 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Fundo transparente inicial com leve desfoque
+  background: rgba(9, 13, 22, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  // Efeito de fundo desfocado e cristalino ao rolar a página
+  &.scrolled {
+    padding: 0.85rem 0;
+    background: rgba(9, 13, 22, 0.45); // Transparência reduzida para ver a Hero ao fundo
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; 
+  width: 100%;
+  max-width: 100%; // Remove a restrição rígida de largura do container
+  padding: 0 3rem; // Espaçamento interno para empurrar logo e idiomas para as bordas da tela
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+}
+
+// ----------------------------------------------------------------------
+// LOGOTIPO DA EMPRESA
+// ----------------------------------------------------------------------
+.brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+
+  .brandTriggle { color: #FBBF24; }
+  .brandSys { color: #3B82F6; }
+}
+
+// ----------------------------------------------------------------------
+// PÍLULA CENTRAL (CONTAINER DOS LINKS)
+// ----------------------------------------------------------------------
+.navPill {
+  display: flex;
+  align-items: center;
+  padding: 0.35rem 0.6rem;
+  border-radius: 50px;
+  background: rgba(15, 23, 42, 0.65); // Fundo da pílula mais cristalino
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 163, 255, 0.25);
+  box-shadow: 0 0 20px rgba(0, 163, 255, 0.12);
+
+  @media (min-width: 992px) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  @media (max-width: 991px) { display: none; }
+}
+
+// ----------------------------------------------------------------------
+// ESTILIZAÇÃO DOS LINKS DA NAVBAR
+// ----------------------------------------------------------------------
+.navLink {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.45rem 0.95rem;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  &:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  &.active {
+    color: #38BDF8;
+    font-weight: 700;
+    border-color: rgba(56, 189, 248, 0.5);
+    background: rgba(0, 163, 255, 0.2);
+    box-shadow: 0 0 12px rgba(0, 163, 255, 0.3), inset 0 0 8px rgba(0, 163, 255, 0.2);
+  }
+}
+
+// ----------------------------------------------------------------------
+// SELETOR DE IDIOMA E AÇÕES DA DIREITA
+// ----------------------------------------------------------------------
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.langSelector {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.langBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #E2E8F0;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  padding: 0.35rem 0.65rem;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+
+  .flagIcon {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(20%) opacity(0.9);
+    transition: all 0.2s ease;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.12);
+
+    .flagIcon {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.1);
+    }
+  }
+
+  &.activeLang {
+    color: #FFFFFF;
+    background: linear-gradient(135deg, rgba(0, 163, 255, 0.35) 0%, rgba(0, 163, 255, 0.2) 100%);
+    border-color: rgba(0, 163, 255, 0.5);
+    box-shadow: 0 0 12px rgba(0, 163, 255, 0.35);
+
+    .flagIcon {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.05);
+    }
+  }
+}
+
+// ----------------------------------------------------------------------
+// MENU RESPONSIVO (MOBILE E TABLET)
+// ----------------------------------------------------------------------
+.mobileToggle {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.mobileDrawer {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(9, 13, 22, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+
+  a {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+
+    &:hover {
+      color: #38BDF8;
+    }
+  }
+}

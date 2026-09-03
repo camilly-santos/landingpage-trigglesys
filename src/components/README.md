@@ -1,0 +1,1 @@
+# Componentes atômicos e genéricos

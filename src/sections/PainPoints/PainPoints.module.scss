@@ -1,0 +1,232 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SEÇÃO PRINCIPAL
+// ─────────────────────────────────────────────────────────────────────────────
+.painPointsSection {
+  background-color: #090d16;
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+
+  // Grade de fundo sutil — profundidade sem poluir
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  // Glow radial central — ancora os cards visualmente no espaço
+  &::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 450px;
+    background: radial-gradient(
+      ellipse,
+      rgba(0, 163, 255, 0.055) 0%,
+      transparent 68%
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CONTAINER
+// ─────────────────────────────────────────────────────────────────────────────
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HEADER DA SEÇÃO
+// ─────────────────────────────────────────────────────────────────────────────
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TÍTULO — ALVO DO SPLITTEXT
+//
+// overflow: visible  →  necessário para que os chars animados com `y` e `blur`
+//                       não sejam cortados pelo overflow padrão do elemento.
+//
+// :global(.char)     →  SplitText injeta spans com classe `.char` no DOM.
+//                       O seletor :global alcança esses elementos fora do
+//                       escopo do CSS Module para aplicar will-change.
+//
+// .splitLine         →  classe injetada via `linesClass` no SplitText.
+//                       overflow:hidden por linha evita que chars y-animados
+//                       apareçam fora da linha antes de ser revelados.
+// ─────────────────────────────────────────────────────────────────────────────
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  overflow: visible; // Crítico: não cortar os chars animados
+
+  @media (min-width: 768px) { font-size: 3rem; }
+
+  // Otimiza os spans individuais de cada caractere para GPU
+  :global(.char) {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+  }
+}
+
+// Wrapper por linha criado pelo SplitText via linesClass
+.splitLine {
+  overflow: hidden;      // Esconde chars antes de subirem para a linha
+  padding-bottom: 0.1em; // Evita corte de descenders (g, j, p, q, y)
+  display: block;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  will-change: transform, opacity;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// GRID DE CARDS
+// ─────────────────────────────────────────────────────────────────────────────
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px)  { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  @media (min-width: 1024px) { grid-template-columns: repeat(3, 1fr); }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CARD INDIVIDUAL
+// ─────────────────────────────────────────────────────────────────────────────
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: default;
+
+  // Base visual: Fundo ultra escuro para destacar o brilho
+  background: #090C15; 
+  
+  // Camada GPU + 3D — obrigatório para o tilt funcionar corretamente
+  will-change: transform;
+  transform-style: preserve-3d;
+
+  // Brilho interno na base (azul mais sutil por padrão) e borda escura
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.05), // Borda fina padrão
+    inset 0 -50px 80px -30px rgba(0, 163, 255, 0.15), // Brilho interno azul na base
+    0 20px 40px -10px rgba(0, 0, 0, 0.5); // Sombra externa escura
+
+  transition: 
+    box-shadow 0.4s ease, 
+    border-color 0.4s ease, 
+    background 0.4s ease;
+
+  // ── Efeito ao passar o mouse: Borda e Sombras AZUIS ──
+  &:hover {
+    background: #0d1220;
+    
+    // Acende tudo em tons de azul (#00a3ff)
+    box-shadow: 
+      0 0 0 1px rgba(0, 163, 255, 0.5),                    // Borda acende em azul
+      inset 0 -60px 100px -30px rgba(0, 163, 255, 0.3),    // Brilho interno azul intensifica
+      0 25px 60px -15px rgba(0, 163, 255, 0.35);           // Sombra externa azul (glow)
+
+    .iconWrapper {
+      background: rgba(0, 163, 255, 0.15);
+      border-color: rgba(0, 163, 255, 0.5);
+      color: #00a3ff;
+      box-shadow: 0 0 20px rgba(0, 163, 255, 0.4);
+    }
+
+    .cardTitle { color: #ffffff; }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ÍCONE
+// ─────────────────────────────────────────────────────────────────────────────
+.iconWrapper {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  // Empurra o ícone no eixo Z para criar paralaxe 3D
+  transform: translateZ(40px);
+  
+  transition: 
+    background   0.3s ease, 
+    border-color 0.3s ease, 
+    color        0.3s ease,
+    box-shadow   0.3s ease;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TEXTOS DO CARD
+// ─────────────────────────────────────────────────────────────────────────────
+.cardTitle {
+  position: relative;
+  z-index: 2;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #F8FAFC;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  margin: 0;
+  
+  // Separa o texto do fundo durante o tilt 3D
+  transform: translateZ(30px);
+  transition: color 0.3s ease;
+}
+
+.cardDescription {
+  position: relative;
+  z-index: 2;
+  font-size: 0.95rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin: 0;
+  
+  // Acompanha o título no eixo Z
+  transform: translateZ(30px);
+}

@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+/* Estrutura base da badge com bordas arredondadas e efeito de fundo desfocado. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: $border-radius-pill;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  width: fit-content;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: $transition-fast;
+
+  /* Variante azul ciano voltada para destaques principais. */
+  &.cyan {
+    background: rgba(0, 163, 255, 0.1);
+    color: $color-electric-cyan;
+    border: 1px solid rgba(0, 163, 255, 0.25);
+  }
+
+  /* Variante roxa para acentos secundários e detalhes de marca. */
+  &.purple {
+    background: rgba(139, 92, 246, 0.1);
+    color: #A855F7;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+  }
+
+  /* Variante verde destinada a métricas de sucesso e indicadores positivos. */
+  &.emerald {
+    background: rgba(16, 185, 129, 0.1);
+    color: $color-emerald-green;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+  }
+
+  /* Variante neutra com contorno sutil para tags secundárias. */
+  &.outline {
+    background: rgba(255, 255, 255, 0.03);
+    color: $color-text-heading;
+    border: 1px solid $glass-border;
+  }
+}
+
+/* Evita que o ícone perca seu formato em textos mais longos. */
+.icon {
+  flex-shrink: 0;
+}

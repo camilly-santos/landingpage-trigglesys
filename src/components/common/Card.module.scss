@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+/* Bloco base do card com desfoque de fundo (glassmorphism) e bordas translúcidas. */
+.card {
+  position: relative;
+  background: $glass-surface;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid $glass-border;
+  border-radius: $border-radius-card;
+  padding: 1.5rem;
+  overflow: hidden;
+  transition: $transition-base;
+
+  /* Variante escura para elementos de maior contraste visual. */
+  &.dark {
+    background: rgba(9, 13, 22, 0.85);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Variante em destaque com borda neon e sombra azulada. */
+  &.featured {
+    border-color: rgba(0, 163, 255, 0.4);
+    box-shadow: $glow-cyan;
+  }
+
+  /* Micro-interação de elevação e brilho ao passar o ponteiro do mouse. */
+  &.hoverable:hover {
+    transform: translateY(-4px);
+    border-color: $glass-border-hover;
+    box-shadow: $glow-card-hover;
+  }
+}
+
+/* Mantém o conteúdo acima de elementos decorativos de fundo. */
+.cardContent {
+  position: relative;
+  z-index: 1;
+}

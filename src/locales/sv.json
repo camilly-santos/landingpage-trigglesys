@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Hem",
+    "solutions": "Lösningar & Teknik",
+    "methodology": "Metodik",
+    "projects": "Projekt",
+    "about": "Om Oss",
+    "compliance": "Efterlevnad",
+    "insights": "Insikter"
+  },
+  "hero": {
+    "badge": "Strategisk IT-rådgivningsboutique & Mjukvaruteknik",
+    "title": {
+      "part1": "Rådgivning inom",
+      "cloud": "Moln,",
+      "security": "Säkerhet",
+      "and": "och",
+      "governance": "Styrning",
+      "part2": "med Arkitektur",
+      "architecture": "\"Interact Once, Run Anywhere\"."
+    },
+    "subtitle": "Vi förvandlar komplexa idéer till praktiska lösningar. Från processmodellering till molnet strukturerar vi skräddarsydda system för företag som behöver optimera kostnader, säkerställa resiliens och skala med full kontroll.",
+    "actions": {
+      "schedule": "Boka Strategisk Diagnos",
+      "talk": "Tala med en Expert"
+    },
+    "microBadges": {
+      "zeroTrust": "Zero Trust Approach",
+      "uml": "Enterprise UML-modellering",
+      "lgpd": "LGPD / GDPR-redo",
+      "iso": "ISO 27001 / 27701",
+      "oracle": "Oracle Java-certifierad"
+    }
+  },
+  "painPoints": {
+    "tag": "PROBLEMEN VI LÖSER",
+    "title": "Smärtpunkterna som bromsar digital utveckling — och hur vi hanterar varje enskild.",
+    "subtitle": "Vi agerar där påverkan är finansiell och operativ: kostnad, säkerhet, standardisering och teknisk kontinuitet.",
+    "cards": [
+      {
+        "id": "cloud-cost",
+        "title": "Höga kostnader och brist på molnkontroll",
+        "description": "Växande fakturor, överdimensionering och brist på finansiell insyn i molnmiljöer."
+      },
+      {
+        "id": "security-risk",
+        "title": "Säkerhetsrisker och driftstopp",
+        "description": "Sårbarheter, avsaknad av övervakning och exponering av kritiska tillgångar."
+      },
+      {
+        "id": "rigid-systems",
+        "title": "Rigida system och brist på standardisering",
+        "description": "Processer utan arkitektonisk modellering (UML), vilket skapar omarbete och kodberoende."
+      },
+      {
+        "id": "unaligned-teams",
+        "title": "Ostrukturerade tekniska team",
+        "description": "Team med fragmenterad kompetens, låg produktivitet och svårigheter att utvecklas."
+      },
+      {
+        "id": "no-dr-plan",
+        "title": "Infrastruktur utan kontinuitetsplan",
+        "description": "Sårbara verksamheter utan strukturerad Disaster Recovery (DR) eller definierade RTO/RPO."
+      },
+      {
+        "id": "cloud-lockin",
+        "title": "Inlåsning och förlust av suveränitet",
+        "description": "Överdrivet beroende av molnleverantörer utan reell dataportabilitet."
+      }
+    ]
+  }
+}

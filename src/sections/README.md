@@ -1,0 +1,1 @@
+# As 8 seções isoladas (JSX + SCSS local)
