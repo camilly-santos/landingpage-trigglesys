@@ -14,7 +14,7 @@ function App() {
 
       {/* Conteúdo principal - Os IDs estão dentro de cada componente */}
       <main>
-        <Hero />
+        <Hero /> 
         <PainPoints />
         <Methodology />
         <Qualifications />

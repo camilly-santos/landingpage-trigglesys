@@ -97,34 +97,39 @@
     ]
   },
   "qualifications": {
-    "tag": "QUALIFICATIONS & CERTIFICATIONS",
-    "title": "Certified Excellence & Compliance",
-    "subtitle": "Our commitment to global standards and continuous education ensures top-tier delivery and risk mitigation.",
+    "tag": "CORPORATE QUALIFICATIONS",
+    "title": "Certified Excellence & Governance",
+    "subtitle": "Our operations are backed by global standards of security, privacy, and technical mastery, ensuring zero compromise on your critical assets.",
     "items": [
       {
-        "id": "oracle-cert",
-        "title": "Oracle Java Certified Professionals",
-        "description": "Highly qualified and globally recognized team in software engineering and educational staff augmentation."
+        "id": "iso",
+        "title": "ISO 27001 & 27701",
+        "description": "Strict compliance with international standards for Information Security Management and Privacy Information Management."
       },
       {
-        "id": "lgpd-gdpr",
-        "title": "LGPD & GDPR Ready",
-        "description": "Architecture and processes in native compliance with major data protection and sovereignty laws."
+        "id": "lgpd",
+        "title": "LGPD & GDPR Native",
+        "description": "Architectures designed from day zero to ensure full digital sovereignty, data localization, and privacy compliance."
       },
       {
-        "id": "iso-comp",
-        "title": "ISO 27001 / 27701 Alignment",
-        "description": "Strict information security and privacy controls applied from diagnosis to final delivery."
+        "id": "oracle",
+        "title": "Oracle Java Certified Experts",
+        "description": "Our engineering core is composed of highly qualified specialists with deep architectural and technical knowledge."
       },
       {
-        "id": "zero-trust",
-        "title": "Zero Trust Architecture & UML",
-        "description": "Advanced modeling (Enterprise UML) and security by design for critical, zero-downtime infrastructures."
+        "id": "zerotrust",
+        "title": "Zero Trust Security Model",
+        "description": "We implement rigid access controls where no entity is trusted by default, drastically reducing attack surfaces."
       },
       {
         "id": "finops",
         "title": "FinOps & Green IT",
-        "description": "Cloud cost optimization combined with sustainable practices, combatting computational oversizing."
+        "description": "Certified practices to eliminate cloud waste, optimizing your financial resources while reducing carbon footprint."
+      },
+      {
+        "id": "uml",
+        "title": "Enterprise UML Modeling",
+        "description": "Rigorous architectural modeling before any code is written, preventing rework and vendor lock-in."
       }
     ]
   }

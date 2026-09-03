@@ -1,0 +1,196 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.qualificationsSection {
+  background-color: #090d16; // Mantém a consistência do dark theme
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+
+  // Grade de fundo sutil
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  // Brilho roxo/azul no fundo direito para diferenciar das outras seções
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HEADER
+// ─────────────────────────────────────────────────────────────────────────────
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  overflow: visible;
+
+  @media (min-width: 768px) { font-size: 3rem; }
+
+  :global(.char) {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+  }
+}
+
+.splitLine {
+  overflow: hidden;
+  padding-bottom: 0.1em;
+  display: block;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  will-change: transform, opacity;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// GRID DE CHECKLIST
+// ─────────────────────────────────────────────────────────────────────────────
+.checklistGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ITEM INDIVIDUAL (Horizontal Card)
+// ─────────────────────────────────────────────────────────────────────────────
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: rgba(10, 16, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  will-change: transform, opacity;
+
+  // Efeito Hover Premium
+  &:hover {
+    background: rgba(13, 20, 36, 0.8);
+    border-color: rgba(139, 92, 246, 0.3); // Usando um tom de roxo (governança) para variar do azul
+    transform: translateY(-3px);
+    box-shadow: 
+      0 10px 30px -10px rgba(0, 0, 0, 0.5),
+      inset 0 0 20px rgba(139, 92, 246, 0.05);
+
+    .iconBox {
+      background: rgba(139, 92, 246, 0.15);
+      border-color: rgba(139, 92, 246, 0.5);
+      color: #b18cf8;
+      
+      .iconGlow {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    .itemTitle { color: #ffffff; }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ÍCONE / CHECKMARK
+// ─────────────────────────────────────────────────────────────────────────────
+.iconBox {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.iconGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: #8b5cf6; // Glow roxo
+  border-radius: 12px;
+  filter: blur(14px);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TEXTOS DO ITEM
+// ─────────────────────────────────────────────────────────────────────────────
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F8FAFC;
+  line-height: 1.3;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.itemDescription {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
