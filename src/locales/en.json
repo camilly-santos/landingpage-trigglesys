@@ -132,5 +132,44 @@
         "description": "Rigorous architectural modeling before any code is written, preventing rework and vendor lock-in."
       }
     ]
+  },
+  "differentials": {
+    "tag": "COMPETITIVE DIFFERENTIALS",
+    "title": "Numbers That Define Our Engineering",
+    "subtitle": "More than consultants, we are technical partners. Our metrics reflect the direct impact on your operation's sovereignty, security, and efficiency.",
+    "stats": [
+      {
+        "id": "lockin",
+        "prefix": "",
+        "value": "0",
+        "suffix": "%",
+        "label": "Vendor Lock-in",
+        "description": "Total digital sovereignty. We build architectures that allow you to migrate or repatriate data with zero technological dependency."
+      },
+      {
+        "id": "compliance",
+        "prefix": "",
+        "value": "100",
+        "suffix": "%",
+        "label": "Native Compliance",
+        "description": "Environments structurally prepared for LGPD, GDPR, and ISO standards from day zero."
+      },
+      {
+        "id": "rampup",
+        "prefix": "",
+        "value": "2",
+        "suffix": "x",
+        "label": "Faster Ramp-up",
+        "description": "With our Educator DNA, we don't just deliver code. We mentor your internal team to ensure technical continuity."
+      },
+      {
+        "id": "downtime",
+        "prefix": "",
+        "value": "0",
+        "suffix": "",
+        "label": "Zero Downtime",
+        "description": "Resilience by design. Structured Disaster Recovery and Zero Trust models for mission-critical operations."
+      }
+    ]
   }
 }

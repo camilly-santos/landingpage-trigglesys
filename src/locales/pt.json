@@ -132,5 +132,44 @@
         "description": "Rigorosa modelagem arquitetural antes de qualquer código ser escrito, prevenindo retrabalho e dependência (lock-in)."
       }
     ]
+  },
+  "differentials": {
+    "tag": "DIFERENCIAIS COMPETITIVOS",
+    "title": "Números que Definem Nossa Engenharia",
+    "subtitle": "Mais que consultores, somos parceiros técnicos. Nossas métricas refletem o impacto direto na soberania, segurança e eficiência da sua operação.",
+    "stats": [
+      {
+        "id": "lockin",
+        "prefix": "",
+        "value": "0",
+        "suffix": "%",
+        "label": "Vendor Lock-in",
+        "description": "Soberania digital total. Construímos arquiteturas que permitem migrar ou repatriar dados com zero dependência tecnológica."
+      },
+      {
+        "id": "compliance",
+        "prefix": "",
+        "value": "100",
+        "suffix": "%",
+        "label": "Compliance Nativo",
+        "description": "Ambientes estruturalmente preparados para exigências da LGPD, GDPR e normas ISO desde o dia zero."
+      },
+      {
+        "id": "rampup",
+        "prefix": "",
+        "value": "2",
+        "suffix": "x",
+        "label": "Ramp-up Mais Rápido",
+        "description": "Com nosso DNA Educador, não apenas entregamos código. Mentoramos seu time interno para garantir continuidade técnica."
+      },
+      {
+        "id": "downtime",
+        "prefix": "Zero",
+        "value": "",
+        "suffix": "",
+        "label": "Downtime / Indisponibilidade",
+        "description": "Resiliência by design. Modelos de Disaster Recovery estruturado e Zero Trust para operações de missão crítica."
+      }
+    ]
   }
 }

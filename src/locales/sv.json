@@ -132,5 +132,44 @@
         "description": "Rigorös arkitektonisk modellering innan någon kod skrivs, vilket förhindrar omarbete och inlåsning."
       }
     ]
+  },
+  "differentials": {
+    "tag": "KONKURRENSFÖRDELAR",
+    "title": "Siffror som definierar vår ingenjörskonst",
+    "subtitle": "Mer än konsulter är vi tekniska partners. Våra mätvärden återspeglar den direkta inverkan på din verksamhets suveränitet, säkerhet och effektivitet.",
+    "stats": [
+      {
+        "id": "lockin",
+        "prefix": "",
+        "value": "0",
+        "suffix": "%",
+        "label": "Leverantörslåsning (Lock-in)",
+        "description": "Total digital suveränitet. Vi bygger arkitekturer som låter dig migrera data med noll teknologiskt beroende."
+      },
+      {
+        "id": "compliance",
+        "prefix": "",
+        "value": "100",
+        "suffix": "%",
+        "label": "Inbyggd efterlevnad",
+        "description": "Miljöer som är strukturellt förberedda för LGPD, GDPR och ISO-standarder från dag noll."
+      },
+      {
+        "id": "rampup",
+        "prefix": "",
+        "value": "2",
+        "suffix": "x",
+        "label": "Snabbare uppstart",
+        "description": "Med vårt utbildar-DNA levererar vi inte bara kod. Vi agerar mentorer för ditt interna team för att säkerställa teknisk kontinuitet."
+      },
+      {
+        "id": "downtime",
+        "prefix": "Noll",
+        "value": "",
+        "suffix": "",
+        "label": "Driftstopp",
+        "description": "Resiliens by design. Strukturerad Disaster Recovery och Zero Trust-modeller för verksamhetskritiska operationer."
+      }
+    ]
   }
 }

@@ -1,0 +1,192 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.differentialsSection {
+  background-color: #090d16;
+  position: relative;
+  padding: 6rem 0 8rem 0;
+  overflow: hidden;
+
+  // Grade de fundo (Mesh sutil)
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  // Iluminação central superiorizada
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(0, 163, 255, 0.06) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HEADER
+// ─────────────────────────────────────────────────────────────────────────────
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  overflow: visible;
+
+  @media (min-width: 768px) { font-size: 3.2rem; }
+
+  :global(.char) {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+  }
+}
+
+.splitLine {
+  overflow: hidden;
+  padding-bottom: 0.1em;
+  display: block;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  will-change: transform, opacity;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// GRID DE ESTATÍSTICAS
+// ─────────────────────────────────────────────────────────────────────────────
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CARDS NUMÉRICOS
+// ─────────────────────────────────────────────────────────────────────────────
+.statCard {
+  background: #090C15;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+
+  // Linha superior gradiente para dar um toque "Dashboard"
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(0, 163, 255, 0) 0%, rgba(0, 163, 255, 0.5) 50%, rgba(0, 163, 255, 0) 100%);
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover {
+    background: #0c111d;
+    transform: translateY(-5px);
+    border-color: rgba(0, 163, 255, 0.2);
+    box-shadow: 
+      0 15px 35px -10px rgba(0, 0, 0, 0.6),
+      inset 0 0 40px rgba(0, 163, 255, 0.03);
+
+    &::before { opacity: 1; }
+    
+    .valueBox { transform: scale(1.05); }
+    .statLabel { color: #ffffff; }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TIPOGRAFIA DOS NÚMEROS E TEXTOS
+// ─────────────────────────────────────────────────────────────────────────────
+.valueBox {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+  
+  // Gradiente Azul Premium para os números
+  background: linear-gradient(135deg, #00A3FF 0%, #00F0FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statValueNumeric,
+.statPrefix {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.statSuffix {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.statLabel {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #F8FAFC;
+  margin: 0 0 0.75rem 0;
+  transition: color 0.3s ease;
+}
+
+.statDescription {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
