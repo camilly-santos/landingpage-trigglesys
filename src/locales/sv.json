@@ -68,5 +68,32 @@
         "description": "Överdrivet beroende av molnleverantörer utan reell dataportabilitet."
       }
     ]
+  },
+  "methodology": {
+    "tag": "VÅR METODIK",
+    "title": "TriggleSys-metoden",
+    "subtitle": "Vi kombinerar europeisk metodisk planering med agilt genomförande för att transformera din infrastruktur från ax till limpa.",
+    "steps": [
+      {
+        "id": "step-1",
+        "title": "1. Prediktiv diagnos (Nordisk stringens)",
+        "description": "Vi analyserar din nuvarande infrastruktur för att identifiera processlöseri (överdimensionering) och sårbarheter. Vi kartlägger risker innan de påverkar din budget eller verksamhet."
+      },
+      {
+        "id": "step-2",
+        "title": "2. Suveränitets- och resiliensarkitektur",
+        "description": "Vi designar en skräddarsydd operation baserad på Zero Trust och Zero Downtime. Vi säkerställer full frihet att migrera data med inbyggd efterlevnad (LGPD/GDPR)."
+      },
+      {
+        "id": "step-3",
+        "title": "3. Effektiv implementering & FinOps",
+        "description": "Vi utför migreringen eller optimeringen med fokus på balans: drastisk minskning av beräkningskostnader (FinOps) i linje med hållbara IT-metoder (Green IT)."
+      },
+      {
+        "id": "step-4",
+        "title": "4. Utbildande personalförstärkning",
+        "description": "Vi levererar inte bara projektet, vi eliminerar ditt teams starttid. Vi tillhandahåller tekniska experter och utbildare som agerar mentorer för ditt interna team."
+      }
+    ]
   }
 }

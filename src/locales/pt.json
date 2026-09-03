@@ -68,6 +68,32 @@
         "description": "Dependência excessiva de fornecedores de nuvem sem portabilidade real de dados e aplicações."
       }
     ]
+  },
+  "methodology": {
+    "tag": "NOSSA METODOLOGIA",
+    "title": "O Método TriggleSys",
+    "subtitle": "Combinamos o planejamento metódico europeu com a execução ágil para transformar sua infraestrutura de ponta a ponta.",
+    "steps": [
+      {
+        "id": "step-1",
+        "title": "1. Diagnóstico Preditivo (Rigor Nórdico)",
+        "description": "Analisamos sua infraestrutura atual para identificar desperdícios de processamento (oversizing) e vulnerabilidades. Mapeamos os riscos antes que eles afetem o seu bolso ou a sua operação."
+      },
+      {
+        "id": "step-2",
+        "title": "2. Arquitetura de Soberania & Resiliência",
+        "description": "Desenhamos uma operação sob medida baseada em Zero Trust e Zero Downtime. Garantimos que sua empresa tenha liberdade total de migrar dados com conformidade nativa (LGPD/GDPR)."
+      },
+      {
+        "id": "step-3",
+        "title": "3. Implementação Eficiente & FinOps",
+        "description": "Executamos a migração ou otimização focando no equilíbrio: redução drástica de custos computacionais (FinOps) alinhada a práticas de TI sustentáveis (Green IT)."
+      },
+      {
+        "id": "step-4",
+        "title": "4. Staff Augmentation Educacional",
+        "description": "Não apenas entregamos o projeto, mas eliminamos o tempo de rampa da sua equipe. Alocamos profissionais e educadores técnicos que mentoram o seu time interno."
+      }
+    ]
   }
-
 }

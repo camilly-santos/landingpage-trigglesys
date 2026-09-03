@@ -68,6 +68,32 @@
         "description": "Excessive reliance on cloud providers without real data and application portability."
       }
     ]
+  },
+  "methodology": {
+    "tag": "OUR METHODOLOGY",
+    "title": "The TriggleSys Method",
+    "subtitle": "We combine European methodical planning with agile execution to transform your infrastructure end-to-end.",
+    "steps": [
+      {
+        "id": "step-1",
+        "title": "1. Predictive Diagnosis (Nordic Rigor)",
+        "description": "We analyze your current infrastructure to identify processing waste (oversizing) and vulnerabilities. We map risks before they affect your budget or operations."
+      },
+      {
+        "id": "step-2",
+        "title": "2. Sovereignty & Resilience Architecture",
+        "description": "We design a custom operation based on Zero Trust and Zero Downtime. We ensure your company has total freedom to migrate data with native compliance (LGPD/GDPR)."
+      },
+      {
+        "id": "step-3",
+        "title": "3. Efficient Implementation & FinOps",
+        "description": "We execute the migration or optimization focusing on balance: drastic reduction of computational costs (FinOps) aligned with sustainable IT practices (Green IT)."
+      },
+      {
+        "id": "step-4",
+        "title": "4. Educational Staff Augmentation",
+        "description": "We don't just deliver the project, we eliminate your team's ramp-up time. We allocate technical professionals and educators who mentor your internal team."
+      }
+    ]
   }
 }
-
