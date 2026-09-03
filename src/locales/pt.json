@@ -95,5 +95,37 @@
         "description": "Não apenas entregamos o projeto, mas eliminamos o tempo de rampa da sua equipe. Alocamos profissionais e educadores técnicos que mentoram o seu time interno."
       }
     ]
+  },
+  "qualifications": {
+    "tag": "QUALIFICAÇÕES E CERTIFICAÇÕES",
+    "title": "Excelência Certificada & Compliance",
+    "subtitle": "Nosso compromisso com padrões globais e educação contínua garante entregas de alto nível e mitigação de riscos.",
+    "items": [
+      {
+        "id": "oracle-cert",
+        "title": "Profissionais Certificados Oracle Java",
+        "description": "Equipe altamente qualificada e reconhecida globalmente em engenharia de software e staff augmentation educacional."
+      },
+      {
+        "id": "lgpd-gdpr",
+        "title": "Prontidão LGPD & GDPR",
+        "description": "Arquitetura e processos em conformidade nativa com as principais leis de proteção e soberania de dados."
+      },
+      {
+        "id": "iso-comp",
+        "title": "Alinhamento ISO 27001 / 27701",
+        "description": "Rigorosos controles de segurança da informação e privacidade aplicados desde o diagnóstico até a entrega."
+      },
+      {
+        "id": "zero-trust",
+        "title": "Arquitetura Zero Trust & UML",
+        "description": "Modelagem avançada (Enterprise UML) e segurança desde o design para infraestruturas críticas e sem downtime."
+      },
+      {
+        "id": "finops",
+        "title": "FinOps & Green IT",
+        "description": "Otimização de custos em nuvem aliada a práticas sustentáveis, combatendo o oversizing computacional."
+      }
+    ]
   }
 }

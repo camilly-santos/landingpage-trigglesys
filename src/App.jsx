@@ -3,6 +3,7 @@ import { Navbar } from './sections/Navbar/Navbar';
 import { Hero } from './sections/Hero/Hero';
 import PainPoints from './sections/PainPoints/PainPoints';
 import Methodology from './sections/Methodology/Methodology';
+import { Qualifications } from './sections/About/Qualifications';
 import './i18n'; // Configuração global de tradução (i18next)
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Hero />
         <PainPoints />
         <Methodology />
+        <Qualifications />
       </main>
     </>
   );

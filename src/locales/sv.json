@@ -95,5 +95,37 @@
         "description": "Vi levererar inte bara projektet, vi eliminerar ditt teams starttid. Vi tillhandahåller tekniska experter och utbildare som agerar mentorer för ditt interna team."
       }
     ]
+  },
+  "qualifications": {
+    "tag": "KVALIFIKATIONER OCH CERTIFIERINGAR",
+    "title": "Certifierad Spetskompetens & Efterlevnad",
+    "subtitle": "Vårt engagemang för globala standarder och kontinuerlig utbildning säkerställer leverans i toppklass och riskreducering.",
+    "items": [
+      {
+        "id": "oracle-cert",
+        "title": "Oracle Java-certifierade Experter",
+        "description": "Högkvalificerat och globalt erkänt team inom mjukvaruteknik och utbildande personalförstärkning."
+      },
+      {
+        "id": "lgpd-gdpr",
+        "title": "LGPD & GDPR-redo",
+        "description": "Arkitektur och processer med inbyggd efterlevnad av viktiga dataskydds- och suveränitetslagar."
+      },
+      {
+        "id": "iso-comp",
+        "title": "ISO 27001 / 27701 Anpassning",
+        "description": "Strikta kontroller för informationssäkerhet och integritet tillämpas från diagnos till slutleverans."
+      },
+      {
+        "id": "zero-trust",
+        "title": "Zero Trust-arkitektur & UML",
+        "description": "Avancerad modellering (Enterprise UML) och inbyggd säkerhet för kritisk infrastruktur utan driftstopp."
+      },
+      {
+        "id": "finops",
+        "title": "FinOps & Green IT",
+        "description": "Optimering av molnkostnader i kombination med hållbara metoder för att motverka överdimensionering av beräkningar."
+      }
+    ]
   }
 }

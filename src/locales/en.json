@@ -95,5 +95,37 @@
         "description": "We don't just deliver the project, we eliminate your team's ramp-up time. We allocate technical professionals and educators who mentor your internal team."
       }
     ]
+  },
+  "qualifications": {
+    "tag": "QUALIFICATIONS & CERTIFICATIONS",
+    "title": "Certified Excellence & Compliance",
+    "subtitle": "Our commitment to global standards and continuous education ensures top-tier delivery and risk mitigation.",
+    "items": [
+      {
+        "id": "oracle-cert",
+        "title": "Oracle Java Certified Professionals",
+        "description": "Highly qualified and globally recognized team in software engineering and educational staff augmentation."
+      },
+      {
+        "id": "lgpd-gdpr",
+        "title": "LGPD & GDPR Ready",
+        "description": "Architecture and processes in native compliance with major data protection and sovereignty laws."
+      },
+      {
+        "id": "iso-comp",
+        "title": "ISO 27001 / 27701 Alignment",
+        "description": "Strict information security and privacy controls applied from diagnosis to final delivery."
+      },
+      {
+        "id": "zero-trust",
+        "title": "Zero Trust Architecture & UML",
+        "description": "Advanced modeling (Enterprise UML) and security by design for critical, zero-downtime infrastructures."
+      },
+      {
+        "id": "finops",
+        "title": "FinOps & Green IT",
+        "description": "Cloud cost optimization combined with sustainable practices, combatting computational oversizing."
+      }
+    ]
   }
 }
