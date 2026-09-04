@@ -1,0 +1,313 @@
+@use '../../styles/mixins' as *;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SEÇÃO PRINCIPAL
+// ─────────────────────────────────────────────────────────────────────────────
+.complianceSection {
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+  @include bg-grid-pattern(linear-gradient(180deg, #050810 0%, #090d16 100%));
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 450px;
+    background: radial-gradient(ellipse, rgba(139, 92, 246, 0.06) 0%, transparent 68%);
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HEADER
+// ─────────────────────────────────────────────────────────────────────────────
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $color-text-heading;
+  overflow: visible;
+
+  @media (min-width: 768px) { font-size: 3rem; }
+
+  :global(.char) {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+  }
+}
+
+.splitLine {
+  overflow: hidden;
+  padding-bottom: 0.1em;
+  display: block;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: $color-text-body;
+  line-height: 1.65;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PORTAIS (LGPD / DENÚNCIAS)
+// ─────────────────────────────────────────────────────────────────────────────
+.gates {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 4rem;
+
+  @media (min-width: 768px) { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+}
+
+.gateCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2.5rem 2rem;
+}
+
+.gateIcon {
+  @include flex-center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(0, 163, 255, 0.08);
+  border: 1px solid rgba(0, 163, 255, 0.2);
+  color: $color-electric-cyan;
+}
+
+.gateTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: $color-text-heading;
+  margin: 0;
+}
+
+.gateDescription {
+  font-size: 0.95rem;
+  color: $color-text-body;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confidentialNotice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: $color-text-muted;
+  margin-top: 0.25rem;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FORMULÁRIO (compartilhado pelos dois cards)
+// ─────────────────────────────────────────────────────────────────────────────
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $color-text-heading;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid $glass-border;
+  background: rgba(255, 255, 255, 0.03);
+  color: $color-text-heading;
+  font-family: $font-family-base;
+  font-size: 0.9rem;
+  transition: $transition-fast;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-electric-cyan;
+    box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.15);
+  }
+}
+
+.select {
+  cursor: pointer;
+
+  option {
+    background: $color-surface;
+    color: $color-text-heading;
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TOGGLE — Identificado / Anônimo
+// ─────────────────────────────────────────────────────────────────────────────
+.toggleGroup {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid $glass-border;
+}
+
+.toggleOption {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 9px;
+  border: none;
+  background: transparent;
+  color: $color-text-body;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transition-fast;
+
+  &:hover {
+    color: $color-text-heading;
+  }
+}
+
+.toggleActive {
+  background: rgba(0, 163, 255, 0.12);
+  color: $color-electric-cyan;
+  box-shadow: 0 0 0 1px rgba(0, 163, 255, 0.3);
+}
+
+// Wrapper animado dos campos Nome/E-mail (só existe quando "identificado")
+.identifyFields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// UPLOAD DE ANEXO
+// ─────────────────────────────────────────────────────────────────────────────
+.fileLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px dashed $glass-border;
+  background: rgba(255, 255, 255, 0.02);
+  color: $color-text-body;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: $transition-fast;
+
+  &:hover {
+    border-color: $glass-border-hover;
+    color: $color-text-heading;
+  }
+}
+
+.fileInput {
+  // Input nativo escondido — o .fileLabel funciona como botão visual
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AVISO DE CONFIDENCIALIDADE
+// ─────────────────────────────────────────────────────────────────────────────
+.confidentialNotice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: $color-text-muted;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MINI LISTA DE DOCUMENTOS (2 por formulário)
+// ─────────────────────────────────────────────────────────────────────────────
+.miniDocsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $glass-border;
+}
+
+.miniDocItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid $glass-border;
+  background: rgba(255, 255, 255, 0.02);
+  text-decoration: none;
+  @include hover-glow(rgba(0, 163, 255, 0.15));
+}
+
+.miniDocIcon {
+  color: $color-electric-cyan;
+  flex-shrink: 0;
+}
+
+.miniDocName {
+  flex: 1;
+  font-size: 0.8rem;
+  color: $color-text-heading;
+}
+
+.miniDocDownloadIcon {
+  color: $color-text-muted;
+  flex-shrink: 0;
+}

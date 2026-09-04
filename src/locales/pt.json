@@ -171,5 +171,78 @@
         "description": "Resiliência by design. Modelos de Disaster Recovery estruturado e Zero Trust para operações de missão crítica."
       }
     ]
+  },
+  "compliance": {
+    "tag": "GOVERNANÇA & CONFORMIDADE",
+    "title": "Hub de Confiança & Governança.",
+    "subtitle": "Como a TriggleSys trata segurança, privacidade, ética e conformidade em cada operação.",
+    "lgpd": {
+      "title": "Atendimento ao Titular dos Dados",
+      "description": "Solicite exclusão, portabilidade ou confirmação de tratamento dos seus dados pessoais, conforme a LGPD e o GDPR.",
+      "form": {
+        "nameLabel": "Nome completo",
+        "namePlaceholder": "Digite seu nome completo",
+        "emailLabel": "E-mail corporativo",
+        "emailPlaceholder": "voce@empresa.com",
+        "requestTypeLabel": "Tipo de requisição",
+        "requestTypePlaceholder": "Selecione o tipo de requisição",
+        "requestTypeOptions": {
+          "deletion": "Exclusão",
+          "portability": "Portabilidade",
+          "confirmation": "Confirmação"
+        },
+        "submit": "Enviar Requisição LGPD"
+      },
+      "documents": [
+        {
+          "id": "privacy-policy",
+          "name": "Política de Privacidade",
+          "href": ""
+        },
+        {
+          "id": "security-policy",
+          "name": "Política de Segurança da Informação",
+          "href": ""
+        }
+      ]
+    },
+    "ethics": {
+      "title": "Canal de Denúncias & Comunicação Ética",
+      "description": "Reporte fraude, assédio, condutas inadequadas ou outras violações ao nosso código de ética, de forma identificada ou anônima.",
+      "confidentialNotice": "Tratamento sigiloso e confidencial garantido.",
+      "form": {
+        "identificationLabel": "Deseja se identificar?",
+        "identifyOption": "Sim, quero me identificar",
+        "anonymousOption": "Prefiro permanecer anônimo",
+        "nameLabel": "Nome completo",
+        "namePlaceholder": "Digite seu nome completo",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "voce@email.com",
+        "categoryLabel": "Categoria",
+        "categoryPlaceholder": "Selecione a categoria",
+        "categoryOptions": {
+          "fraud": "Fraude",
+          "harassment": "Assédio",
+          "misconduct": "Conduta",
+          "other": "Outro"
+        },
+        "descriptionLabel": "Descrição",
+        "descriptionPlaceholder": "Descreva a situação com o máximo de detalhes possível",
+        "attachmentLabel": "Anexar documento (opcional)",
+        "submit": "Enviar Denúncia"
+      },
+      "documents": [
+        {
+          "id": "ethics-code",
+          "name": "Código de Ética e Conduta",
+          "href": ""
+        },
+        {
+          "id": "nda",
+          "name": "NDA — Acordo de Confidencialidade",
+          "href": ""
+        }
+      ]
+    }
   }
 }

@@ -53,6 +53,21 @@
       border-color: $color-electric-cyan;
     }
   }
+
+  /* Preto por padrão, acende em azul elétrico apenas no hover. */
+  &.dark {
+    background: #090D16;
+    color: $color-text-heading;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    &:hover {
+      background: $color-electric-cyan;
+      color: #090D16;
+      border-color: $color-electric-cyan;
+      box-shadow: 0 6px 25px rgba(0, 163, 255, 0.35);
+      transform: translateY(-2px);
+    }
+  }
 }
 
 /* Transição suave para movimentação do ícone. */

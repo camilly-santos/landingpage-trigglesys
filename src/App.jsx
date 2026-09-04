@@ -5,6 +5,7 @@ import PainPoints from './sections/PainPoints/PainPoints';
 import Methodology from './sections/Methodology/Methodology';
 import Qualifications from './sections/About/Qualifications';
 import Differentials from './sections/About/Differentials';
+import Compliance from './sections/Compliance/Compliance';
 
 import './i18n'; // Configuração global de tradução (i18next)
 
@@ -21,6 +22,7 @@ function App() {
         <Methodology />
         <Qualifications />
         <Differentials />
+        <Compliance />
       </main>
     </>
   );

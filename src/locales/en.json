@@ -171,5 +171,78 @@
         "description": "Resilience by design. Structured Disaster Recovery and Zero Trust models for mission-critical operations."
       }
     ]
+  },
+  "compliance": {
+    "tag": "GOVERNANCE & COMPLIANCE",
+    "title": "Trust & Governance Hub.",
+    "subtitle": "How TriggleSys handles security, privacy, ethics and compliance across every operation.",
+    "lgpd": {
+      "title": "Data Subject Support",
+      "description": "Request deletion, portability or confirmation of processing of your personal data, in accordance with LGPD and GDPR.",
+      "form": {
+        "nameLabel": "Full name",
+        "namePlaceholder": "Enter your full name",
+        "emailLabel": "Corporate email",
+        "emailPlaceholder": "you@company.com",
+        "requestTypeLabel": "Request type",
+        "requestTypePlaceholder": "Select the request type",
+        "requestTypeOptions": {
+          "deletion": "Deletion",
+          "portability": "Portability",
+          "confirmation": "Confirmation"
+        },
+        "submit": "Send LGPD Request"
+      },
+      "documents": [
+        {
+          "id": "privacy-policy",
+          "name": "Privacy Policy",
+          "href": ""
+        },
+        {
+          "id": "security-policy",
+          "name": "Information Security Policy",
+          "href": ""
+        }
+      ]
+    },
+    "ethics": {
+      "title": "Ethics Hotline & Reporting Channel",
+      "description": "Report fraud, harassment, misconduct or other violations of our code of ethics, identified or anonymously.",
+      "confidentialNotice": "Confidential and secure handling guaranteed.",
+      "form": {
+        "identificationLabel": "Would you like to identify yourself?",
+        "identifyOption": "Yes, I want to identify myself",
+        "anonymousOption": "I prefer to remain anonymous",
+        "nameLabel": "Full name",
+        "namePlaceholder": "Enter your full name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@email.com",
+        "categoryLabel": "Category",
+        "categoryPlaceholder": "Select the category",
+        "categoryOptions": {
+          "fraud": "Fraud",
+          "harassment": "Harassment",
+          "misconduct": "Misconduct",
+          "other": "Other"
+        },
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Describe the situation in as much detail as possible",
+        "attachmentLabel": "Attach a document (optional)",
+        "submit": "Submit Report"
+      },
+      "documents": [
+        {
+          "id": "ethics-code",
+          "name": "Code of Ethics and Conduct",
+          "href": ""
+        },
+        {
+          "id": "nda",
+          "name": "NDA — Non-Disclosure Agreement",
+          "href": ""
+        }
+      ]
+    }
   }
 }

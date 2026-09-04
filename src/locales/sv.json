@@ -171,5 +171,78 @@
         "description": "Resiliens by design. Strukturerad Disaster Recovery och Zero Trust-modeller för verksamhetskritiska operationer."
       }
     ]
+  },
+  "compliance": {
+    "tag": "STYRNING & EFTERLEVNAD",
+    "title": "Förtroende- & styrningsnav.",
+    "subtitle": "Så hanterar TriggleSys säkerhet, integritet, etik och efterlevnad i varje verksamhet.",
+    "lgpd": {
+      "title": "Support för registrerade",
+      "description": "Begär radering, dataportabilitet eller bekräftelse av behandling av dina personuppgifter, i enlighet med LGPD och GDPR.",
+      "form": {
+        "nameLabel": "Fullständigt namn",
+        "namePlaceholder": "Ange ditt fullständiga namn",
+        "emailLabel": "Företags-e-post",
+        "emailPlaceholder": "du@foretag.com",
+        "requestTypeLabel": "Typ av begäran",
+        "requestTypePlaceholder": "Välj typ av begäran",
+        "requestTypeOptions": {
+          "deletion": "Radering",
+          "portability": "Dataportabilitet",
+          "confirmation": "Bekräftelse"
+        },
+        "submit": "Skicka LGPD-begäran"
+      },
+      "documents": [
+        {
+          "id": "privacy-policy",
+          "name": "Integritetspolicy",
+          "href": ""
+        },
+        {
+          "id": "security-policy",
+          "name": "Informationssäkerhetspolicy",
+          "href": ""
+        }
+      ]
+    },
+    "ethics": {
+      "title": "Etisk visselblåsarkanal",
+      "description": "Rapportera bedrägeri, trakasserier, tjänstefel eller andra brott mot vår uppförandekod, identifierad eller anonymt.",
+      "confidentialNotice": "Konfidentiell och säker hantering garanteras.",
+      "form": {
+        "identificationLabel": "Vill du identifiera dig?",
+        "identifyOption": "Ja, jag vill identifiera mig",
+        "anonymousOption": "Jag föredrar att vara anonym",
+        "nameLabel": "Fullständigt namn",
+        "namePlaceholder": "Ange ditt fullständiga namn",
+        "emailLabel": "E-post",
+        "emailPlaceholder": "du@epost.com",
+        "categoryLabel": "Kategori",
+        "categoryPlaceholder": "Välj kategori",
+        "categoryOptions": {
+          "fraud": "Bedrägeri",
+          "harassment": "Trakasserier",
+          "misconduct": "Tjänstefel",
+          "other": "Annat"
+        },
+        "descriptionLabel": "Beskrivning",
+        "descriptionPlaceholder": "Beskriv situationen så detaljerat som möjligt",
+        "attachmentLabel": "Bifoga dokument (valfritt)",
+        "submit": "Skicka rapport"
+      },
+      "documents": [
+        {
+          "id": "ethics-code",
+          "name": "Uppförandekod",
+          "href": ""
+        },
+        {
+          "id": "nda",
+          "name": "NDA — Sekretessavtal",
+          "href": ""
+        }
+      ]
+    }
   }
 }
